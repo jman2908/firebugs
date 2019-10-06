@@ -23,36 +23,36 @@ var guessedLettersText = document.getElementById("guessed-letters");
 var computerGuess = computerChoiceText[Math.floor(Math.random() * computerOptions.length)];
 
 
-    document.onkeyup(function(event) {
+document.onkeyup(function (event) {
        var userGuess = event.key;
        var userGuessLower = userGuess.toLowerCase();
        guessedLetters.push(userGuess);
 
 
        if (computerChoices.indexOf(userGuess)) {
+
               if (userGuess === computerGuess) {
                      wins++;
               } else if (userGuess !== computerGuess) {
                      guessesLeft--;
+              }
 
               winsText.textContent = "wins: " + wins;
               lossesText.textContent = "losses: " + losses;
               guessLeftText.textContent = "Guess Left: " + guessLeft;
               guessedLettersText.textContent = "Your guesses so far " + guessedLetters;
 
-              };
+       };
 
 
                      
-           if (guessLeft < 0) {
-                  losses++;
-                  alert("the computer's choice was: " + computerGuess.toUpperCase());
-                  var playAgain = confirm("you lost, press ok to play again")
-                  if (playAgain === true) {
-                         guessesLeft = 9;
-                         guessedLetters = [];
-                         computerGuess = computerChoices[Math.floor(Math.random( * computerChoices.length))];
-                  }
-              
-
-       };
+       if (guessLeft < 0) {
+              losses++;
+              alert("the computer's choice was: " + computerGuess.toUpperCase());
+              var playAgain = confirm("you lost, press ok to play again")
+              if (playAgain === true) {
+                  guessesLeft = 9;
+                  guessedLetters = [];
+                  computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+              }
+       }; 

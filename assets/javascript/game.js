@@ -7,14 +7,6 @@
     var guessesLeft = 9;
     var guessedLetters = [];
        
-
-//    var directionsText = document.getElementById("dir-text");
-//    var userChoiceText = document.getElementById("usercho-text");
-//    var computerChoiceText = document.getElementById("computercho-text");
-//    var winsText = document.getElementById("wins-text");
-//    var lossesText = document.getElementById("losses-text");
-//    var guessleftText = document.getElementById("guessleft");
-
 var winsText = document.getElementById("wins-text");
 var lossesText = document.getElementById("losses-text");
 var guessesLeftLetters = document.getElementById("guesses left-text");
@@ -56,4 +48,4 @@ document.onkeyup(function (event) {
                   computerGuess = computerGuess[Math.floor(Math.random() * computerGuess.length)];
               }
        }
-};
+});

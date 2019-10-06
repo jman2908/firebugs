@@ -17,10 +17,10 @@
 
 var winsText = document.getElementById("wins-text");
 var lossesText = document.getElementById("losses-text");
-var guessLeftLetters = document.getElementById("guesses left-text");
+var guessesLeftLetters = document.getElementById("guesses left-text");
 var guessedLettersText = document.getElementById("guessed-letters");
 
-var computerGuess = computerChoiceText[Math.floor(Math.random() * computerOptions.length)];
+var computerGuess = computerGuess[Math.floor(Math.random() * computerGuess.length)];
 
 
 document.onkeyup(function (event) {
@@ -29,30 +29,31 @@ document.onkeyup(function (event) {
        guessedLetters.push(userGuess);
 
 
-       if (computerChoices.indexOf(userGuess)) {
+       if (computerGuess.indexOf(userGuess)) {
 
               if (userGuess === computerGuess) {
                      wins++;
-              } else if (userGuess !== computerGuess) {
+              } 
+              
+              else if (userGuess !== computerGuess) {
                      guessesLeft--;
               }
 
               winsText.textContent = "wins: " + wins;
               lossesText.textContent = "losses: " + losses;
-              guessLeftText.textContent = "Guess Left: " + guessLeft;
+              guessesLeftText.textContent = "Guess Left: " + guessesLeft;
               guessedLettersText.textContent = "Your guesses so far " + guessedLetters;
 
        };
 
-
-                     
-       if (guessLeft < 0) {
+       if (guessesLeft < 0) {
               losses++;
               alert("the computer's choice was: " + computerGuess.toUpperCase());
               var playAgain = confirm("you lost, press ok to play again")
               if (playAgain === true) {
                   guessesLeft = 9;
                   guessedLetters = [];
-                  computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+                  computerGuess = computerGuess[Math.floor(Math.random() * computerGuess.length)];
               }
-       }; 
+       }
+};

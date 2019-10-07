@@ -7,10 +7,11 @@
     var guessesLeft = 9;
     var guessedLetters = [];
        
-var winsText = document.getElementById("wins-text");
-var lossesText = document.getElementById("losses-text");
-var guessesLeftLetters = document.getElementById("guesses left-text");
-var guessedLettersText = document.getElementById("guessed-letters");
+    var toBeginText = document.getElementById("tobegin-text");
+    var winsText = document.getElementById("wins-text");
+    var lossesText = document.getElementById("losses-text");
+    var guessesLeftLetters = document.getElementById("guesses left-text");
+    var guessedLettersText = document.getElementById("guessed-letters");
 
 var computerGuess = computerGuess[Math.floor(Math.random() * computerGuess.length)];
 
@@ -31,6 +32,7 @@ document.onkeyup(function (event) {
                      guessesLeft--;
               }
 
+              toBeginText.textContent = "";
               winsText.textContent = "wins: " + wins;
               lossesText.textContent = "losses: " + losses;
               guessesLeftText.textContent = "Guess Left: " + guessesLeft;

@@ -1,5 +1,52 @@
+
 header {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: purple;
     text-align: center;
+    font-family: 'Grenze', serif;
+    font-size: 70px;
+}
+
+body {
+    background-color: lightblue;
+}
+
+div {
+    font-size: 20px;
+    margin-left: 20px;
+    /* font-family: 'Lobster', cursive; */
+}
+
+#tostart-text {
+    /* font-size: 20px; */
+    font-family: 'Lobster', cursive;
+    margin: 7%;
+}
+
+#directions-text {
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    font-family: 'Heebo', sans-serif;
+}
+
+#computerguess-text {
+    /* font-size: 20px; */
+    font-family: 'Lobster', cursive;
+}
+
+#wins-text{
+    font-family: 'Lobster', cursive;
+    /* font-size: 20px; */
+}
+
+#losses-text {
+    font-family: 'Lobster', cursive;
+}
+
+#guessesleft-text {
+    font-family: 'Lobster', cursive;
+}
+
+#guessedletters-text {
+    font-family: 'Lobster', cursive;
 }
